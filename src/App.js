@@ -3,6 +3,7 @@ import "./App.css";
 import text from "./text";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 function App() {
+  const [typo, setTypo] = useState(true);
   const [index, setIncrement] = useState(0);
   const textArr = text.split("");
   return (
@@ -21,10 +22,11 @@ function App() {
       </p>
 
       <KeyboardEventHandler
-        handleKeys={textArr[index] === " " ? ["space"] : [textArr[index]]}
+        handleKeys={["all"]}
         onKeyEvent={(key, e) => {
-          console.log(key, index);
-          setIncrement(index + 1);
+          e.key === textArr[index]
+            ? setIncrement(index + 1)
+            : console.log(`You pressed: ${e.key} \n press: ${textArr[index]}`);
         }}
       />
     </div>
