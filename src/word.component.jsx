@@ -1,10 +1,12 @@
 import React from "react";
 import "./word.styles.css";
 import Letter from "./letter.component";
-const Word = ({ word, wordIndex }) => {
+const Word = ({ word, wordIndex, currentIndex }) => {
   const letters = word.map((letter, idx) => {
     const index = `${wordIndex}-${idx}`;
-    return <Letter letter={letter} key={index} />;
+    const currentIdx = `${currentIndex[0]}-${currentIndex[1]}`;
+    const green = index === currentIdx ? true : false;
+    return <Letter letter={letter} key={index} green={green} />;
   });
   return <div className="Word">{letters}</div>;
 };

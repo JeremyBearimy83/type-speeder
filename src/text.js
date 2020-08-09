@@ -1,3 +1,3 @@
 const text =
-  "What I'm about to tell you is top secret. A conspiracy bigger than all of us. There's a powerful group of people out there that are secretly running the world. I'm talking about the guys no one knows about, the ones that are invisible. The top 1% of the top 1%, the guys that play God without permission. And now I think they're following me.";
+  "There are dreamers and there are realists in this world, you think the dreamers would find the dreamers and the realists would find the realists, but more often than not the opposite is true. See the dreamers need the realists to keep the dreamers from soaring too close to the sun. And the realists? Well without the dreamers, they might not ever get off the ground";
 export default text;

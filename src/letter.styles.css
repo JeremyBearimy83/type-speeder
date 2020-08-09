@@ -4,3 +4,7 @@
   font-size: 30px;
   font-family: "Roboto Mono";
 }
+.correct {
+  color: green;
+  background-color: aquamarine;
+}
