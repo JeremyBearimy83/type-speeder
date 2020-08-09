@@ -8,8 +8,13 @@ function App() {
   const [typo, setTypo] = useState(true);
   const [index, setIncrement] = useState(0);
   const textArr = text.split("");
+  console.log(`Type of textArr: ${typeof textArr}`);
   const wordsArr = text.split(" ");
-  const words = wordsArr.map((word) => <Word word={word} />);
+  const wordsArr2 = wordsArr.map((word) => word.split(""));
+  const wordsArr3 = wordsArr2.map((word) => [...word, " "]);
+  const words = wordsArr3.map((word, index) => {
+    return <Word word={word} key={index} wordIndex={index} />;
+  });
   useEffect(() => {}, []);
   return (
     <div className="App">
